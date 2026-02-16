@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pastelería Balaguer - Tradición desde 1952</title>
+
+  <!-- Meta SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Pastelería Balaguer - Tradición artesanal desde 1952. Croissants recién horneados, tartas caseras, bocadillos artesanos y nuestra selecta bodega de vinos y licores." />
+  <meta name="keywords"
+    content="pastelería, croissants, tartas, bocadillos, bodega, vinos, licores, artesanal, Madrid" />
+
+  <!-- Tipografías Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="contenedor nav">
+      <div class="logo">
+        <span class="logo-icon">🍰</span>
+        Pastelería Balaguer
+        <span class="logo-subtitle">Desde 1952</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#escaparate">Escaparate</a>
+        <a href="#tartas">Tartas y Bocadillos</a>
+        <a href="#bodega">Bodega</a>
+        <a href="#sobre">Nuestra Historia</a>
+        <a href="#contacto">Contacto</a>
+        <div class="nav-carrito-wrapper">
+          <button class="nav-carrito" id="btnCarrito" title="Ver pedido">
+            🛒 <span id="contadorCarrito">0</span>
+          </button>
+          <div class="carrito-modal" id="carritoModal">
+            <div class="carrito-contenido">
+              <h3>Tu pedido</h3>
+              <div id="itemsCarrito" class="carrito-items"></div>
+              <div class="carrito-total">
+                <strong>Total: <span id="totalCarrito">0.00</span> €</strong>
+              </div>
+              <button class="btn" id="btnPedido" style="width: 100%; margin-top: 1rem;">Confirmar pedido</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INICIO -->
+  <section id="inicio">
+    <div class="contenedor hero">
+      <div class="hero-texto fade-up">
+        <div class="hero-badges">
+          <div class="badge"><span>🥐</span> Recién horneado</div>
+          <div class="badge"><span>🍇</span> Bodega selecta</div>
+          <div class="badge"><span>🏆</span> Más de 70 años</div>
+        </div>
+
+        <h1>Pastelería Balaguer<span> Tradición familiar desde 1952</span></h1>
+        <p>
+          En pleno corazón de Madrid, elaboramos cada día croissants artesanos, tartas de receta familiar
+          y bocadillos con ingredientes de primera. Nuestra bodega ofrece una cuidada selección de vinos
+          y licores para acompañar cada momento.
+        </p>
+
+        <div class="hero-botones">
+          <a href="#escaparate" class="btn">Ver productos <span>→</span></a>
+          <a href="#contacto" class="btn btn-outline">Hacer pedido</a>
+        </div>
+      </div>
+
+      <div class="hero-imagen fade-up">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <h2>Lo más vendido hoy</h2>
+            <div class="hero-chip">
+              <div class="hero-chip-dot"></div>
+              Recomendado
+            </div>
+          </div>
+
+          <div class="hero-productos">
+            <div class="mini-card">
+              <div class="mini-card-img">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&h=600&q=80" alt="Croissants" loading="lazy" decoding="async">
+                <div class="mini-badge">🥐</div>
+              </div>
+              <div class="mini-card-content">
+                <strong>Croissant Mantequilla</strong>
+                <span class="mini-tag">Recién horneado</span>
+                <span class="mini-price">1.80 €</span>
+              </div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&h=600&q=80" alt="Tarta" loading="lazy" decoding="async">
+                <div class="mini-badge">🍰</div>
+              </div>
+              <div class="mini-card-content">
+                <strong>Tarta de Santiago</strong>
+                <span class="mini-tag">Receta tradicional</span>
+                <span class="mini-price">Desde 24 €</span>
+              </div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-img">
+                <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&h=600&q=80" alt="Vino" loading="lazy" decoding="async">
+                <div class="mini-badge">🍷</div>
+              </div>
+              <div class="mini-card-content">
+                <strong>Vinos selectos</strong>
+                <span class="mini-tag">D.O. Rioja y más</span>
+                <span class="mini-price-special">Ver bodega</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card-footer">
+            <span>Horneamos cada mañana</span>
+            <span class="hero-badge-dest">🥖 Pan del día</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESCAPARATE - CROISSANTS -->
+  <section id="escaparate">
+    <div class="contenedor">
+      <h2>Nuestro Escaparate</h2>
+      <p class="section-subtitle">
+        Croissants artesanos elaborados con masa madre y mantequilla francesa
+      </p>
+
+      <div class="menu-grid">
+        <article class="menu-card destacado">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&h=600&q=80" alt="Croissant Mantequilla" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Croissant de Mantequilla</div>
+            <div class="menu-etiqueta">El clásico francés</div>
+            <p class="menu-detalle">
+              Hojaldre crujiente con láminas de mantequilla francesa. Fermentación de 18 horas.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 1.80 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Croissant de Mantequilla" data-precio="1.80">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&h=600&q=80" alt="Croissant Chocolate" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Croissant de Chocolate</div>
+            <div class="menu-etiqueta">Con chocolate belga</div>
+            <p class="menu-detalle">
+              Relleno generoso de chocolate belga 70% cacao. Perfecto para empezar el día.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 2.20 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Croissant de Chocolate" data-precio="2.20">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1619985663530-f5e38fae9e86?auto=format&fit=crop&w=800&h=600&q=80" alt="Croissant Almendra" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Croissant de Almendra</div>
+            <div class="menu-etiqueta">Con crema frangipane</div>
+            <p class="menu-detalle">
+              Cubierto con almendra laminada y relleno de nuestra crema de almendra artesana.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 2.50 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Croissant de Almendra" data-precio="2.50">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&h=600&q=80" alt="Palmera" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Palmera de Chocolate</div>
+            <div class="menu-etiqueta">Crujiente y dulce</div>
+            <p class="menu-detalle">
+              Hojaldre caramelizado con virutas de chocolate negro. Un clásico de nuestro obrador.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 2.00 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Palmera de Chocolate" data-precio="2.00">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1502436957232-d8dfd99e6df4?auto=format&fit=crop&w=800&h=600&q=80" alt="Napolitana" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Napolitana de Crema</div>
+            <div class="menu-etiqueta">Receta de la casa</div>
+            <p class="menu-detalle">
+              Hojaldre relleno de nuestra crema pastelera casera con toque de vainilla bourbon.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 2.10 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Napolitana de Crema" data-precio="2.10">Agregar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-imagen">
+            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=800&h=600&q=80" alt="Pain au Raisin" loading="lazy" decoding="async">
+          </div>
+          <div class="menu-card-contenido">
+            <div class="menu-titulo">Pain au Raisin</div>
+            <div class="menu-etiqueta">Con pasas sultanas</div>
+            <p class="menu-detalle">
+              Espiral de hojaldre con crema pastelera y pasas sultanas maceradas en ron.
+            </p>
+            <div class="menu-precios">
+              <span>Unidad · 2.30 €</span>
+            </div>
+            <div class="producto-selectors">
+              <input type="number" class="cantidad-input" min="1" max="20" value="1" placeholder="Cantidad">
+              <button class="btn-agregar" data-producto="Pain au Raisin" data-precio="2.30">Agregar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARTAS Y BOCADILLOS -->
+  <section id="tartas">
+    <div class="contenedor">
+      <h2>Tartas y Bocadillos</h2>
+      <p class="section-subtitle">
+        Recetas de la casa para celebrar o disfrutar cada día
+      </p>
+
+      <div class="tabs-menu">
+        <button class="tab-btn active" data-tab="tartas-tab">Tartas</button>
+        <button class="tab-btn" data-tab="bocadillos-tab">Bocadillos</button>
+      </div>
+
+      <!-- TAB TARTAS -->
+      <div class="menu-tab" id="tab-tartas-tab">
+        <div class="menu-grid">
+          <article class="menu-card destacado">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&h=600&q=80" alt="Tarta de Santiago" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Tarta de Santiago</div>
+              <div class="menu-etiqueta">Receta tradicional gallega</div>
+              <p class="menu-detalle">
+                Almendra molida, huevo, azúcar y ralladura de limón. Jugosa y esponjosa con la cruz de Santiago.
+              </p>
+              <div class="menu-precios">
+                <span>Mediana · 24 €</span>
+                <span>Grande · 32 €</span>
+              </div>
+              <div class="producto-selectors">
+                <select class="selector-tamaño" data-producto="Tarta de Santiago" data-precios="24|32">
+                  <option value="0">Mediana - 24€</option>
+                  <option value="1">Grande - 32€</option>
+                </select>
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Tarta de Santiago">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&h=600&q=80" alt="Tarta Tres Chocolates" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Tarta Tres Chocolates</div>
+              <div class="menu-etiqueta">Chocolate negro, con leche y blanco</div>
+              <p class="menu-detalle">
+                Tres capas de mousse de chocolate sobre base de bizcocho. Una explosión de sabor.
+              </p>
+              <div class="menu-precios">
+                <span>Mediana · 28 €</span>
+                <span>Grande · 36 €</span>
+              </div>
+              <div class="producto-selectors">
+                <select class="selector-tamaño" data-producto="Tarta Tres Chocolates" data-precios="28|36">
+                  <option value="0">Mediana - 28€</option>
+                  <option value="1">Grande - 36€</option>
+                </select>
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Tarta Tres Chocolates">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1588195538326-c5b1e5b80ab0?auto=format&fit=crop&w=800&h=600&q=80" alt="Cheesecake" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Cheesecake de Frutos Rojos</div>
+              <div class="menu-etiqueta">Cremosa y suave</div>
+              <p class="menu-detalle">
+                Queso crema con base de galleta y cobertura de mermelada casera de frutos del bosque.
+              </p>
+              <div class="menu-precios">
+                <span>Mediana · 26 €</span>
+                <span>Grande · 34 €</span>
+              </div>
+              <div class="producto-selectors">
+                <select class="selector-tamaño" data-producto="Cheesecake de Frutos Rojos" data-precios="26|34">
+                  <option value="0">Mediana - 26€</option>
+                  <option value="1">Grande - 34€</option>
+                </select>
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Cheesecake de Frutos Rojos">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&h=600&q=80" alt="Milhoja" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Milhoja de Crema y Nata</div>
+              <div class="menu-etiqueta">El postre tradicional</div>
+              <p class="menu-detalle">
+                Capas de hojaldre crujiente alternadas con crema pastelera y nata montada. Glaseado perfecto.
+              </p>
+              <div class="menu-precios">
+                <span>Mediana · 22 €</span>
+                <span>Grande · 29 €</span>
+              </div>
+              <div class="producto-selectors">
+                <select class="selector-tamaño" data-producto="Milhoja de Crema y Nata" data-precios="22|29">
+                  <option value="0">Mediana - 22€</option>
+                  <option value="1">Grande - 29€</option>
+                </select>
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Milhoja de Crema y Nata">Agregar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- TAB BOCADILLOS -->
+      <div class="menu-tab" id="tab-bocadillos-tab" style="display:none;">
+        <div class="menu-grid">
+          <article class="menu-card destacado">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&h=600&q=80" alt="Bocadillo Jamón" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Bocadillo de Jamón Ibérico</div>
+              <div class="menu-etiqueta">Con pan de molde artesano</div>
+              <p class="menu-detalle">
+                Jamón ibérico de bellota cortado fino en pan de molde casero con tomate natural rallado y aceite virgen extra.
+              </p>
+              <div class="menu-precios">
+                <span>Unidad · 6.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Bocadillo de Jamón Ibérico" data-precio="6.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1621852004158-f3bc188ace2d?auto=format&fit=crop&w=800&h=600&q=80" alt="Bocadillo Tortilla" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Bocadillo de Tortilla Española</div>
+              <div class="menu-etiqueta">Receta tradicional</div>
+              <p class="menu-detalle">
+                Tortilla de patata jugosa en barra del día. El bocadillo de siempre, con huevos camperos y patata fresca.
+              </p>
+              <div class="menu-precios">
+                <span>Unidad · 4.80 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Bocadillo de Tortilla Española" data-precio="4.80">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&w=800&h=600&q=80" alt="Bocadillo Calamares" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Bocadillo de Calamares</div>
+              <div class="menu-etiqueta">Auténtico madrileño</div>
+              <p class="menu-detalle">
+                Calamares a la romana crujientes en pan de barra recién horneado. Con limón al lado.
+              </p>
+              <div class="menu-precios">
+                <span>Unidad · 5.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Bocadillo de Calamares" data-precio="5.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1619096252214-ef06c45683e3?auto=format&fit=crop&w=800&h=600&q=80" alt="Bocadillo Queso" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Bocadillo de Queso Manchego</div>
+              <div class="menu-etiqueta">Con tomate y aceite</div>
+              <p class="menu-detalle">
+                Queso manchego curado, tomate natural y aceite de oliva virgen extra en pan de centeno.
+              </p>
+              <div class="menu-precios">
+                <span>Unidad · 5.20 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Bocadillo de Queso Manchego" data-precio="5.20">Agregar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODEGA -->
+  <section id="bodega">
+    <div class="contenedor">
+      <h2>Nuestra Bodega</h2>
+      <p class="section-subtitle">
+        Vinos y licores seleccionados para acompañar nuestros dulces o disfrutar en casa
+      </p>
+
+      <div class="tabs-menu">
+        <button class="tab-btn active" data-tab="vinos-tab">Vinos</button>
+        <button class="tab-btn" data-tab="licores-tab">Licores y Espirituosos</button>
+      </div>
+
+      <!-- TAB VINOS -->
+      <div class="menu-tab" id="tab-vinos-tab">
+        <div class="menu-grid">
+          <article class="menu-card destacado">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&h=600&q=80" alt="Solagüen Rioja" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Solagüen</div>
+              <div class="menu-etiqueta">D.O.Ca. Rioja - Crianza 2020</div>
+              <p class="menu-detalle">
+                Crianza de Rioja con carácter. Tempranillo en su expresión más pura con crianza en barrica.
+                Equilibrado y versátil para cualquier ocasión.
+              </p>
+              <div class="menu-precios">
+                <span>Botella · 6.90 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="12" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Solagüen Rioja Crianza 2020" data-precio="6.90">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&h=600&q=80" alt="Sangre Nio" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Sangre Nio</div>
+              <div class="menu-etiqueta">D.O. Bierzo - Uva de Hondón</div>
+              <p class="menu-detalle">
+                Vino joven del Bierzo con variedad autóctona Uva de Hondón. Fresco, afrutado y de fácil beber.
+                Perfecto para tapas y comidas informales.
+              </p>
+              <div class="menu-precios">
+                <span>Botella · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="12" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Sangre Nio Bierzo" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=800&h=600&q=80" alt="Barrasevilla" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Barrasevilla</div>
+              <div class="menu-etiqueta">Segovia - Tempranillo Machuño</div>
+              <p class="menu-detalle">
+                Vino de autor de Segovia. Tempranillo Machuño, variedad local de viñas viejas.
+                Intenso, expresivo y con gran personalidad.
+              </p>
+              <div class="menu-precios">
+                <span>Botella · 12.60 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="12" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Barrasevilla Segovia" data-precio="12.60">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=800&h=600&q=80" alt="Valtravieso" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Valtravieso Reserva 2006 Magnum</div>
+              <div class="menu-etiqueta">D.O. Ribera del Duero - Reserva</div>
+              <p class="menu-detalle">
+                Reserva excepcional en formato Magnum. Ribera del Duero con más de 15 años de evolución.
+                Complejo, elegante y para momentos especiales.
+              </p>
+              <div class="menu-precios">
+                <span>Magnum · 12.80 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="6" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Valtravieso Reserva Magnum" data-precio="12.80">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=800&h=600&q=80" alt="El Vínculo" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">El Vínculo Reserva 2006</div>
+              <div class="menu-etiqueta">D.O. La Mancha - Reserva</div>
+              <p class="menu-detalle">
+                Gran reserva manchega de añada excepcional. Largo envejecimiento en barrica y botella.
+                Potente, estructurado y con mucha personalidad.
+              </p>
+              <div class="menu-precios">
+                <span>Botella · 15.10 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="12" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="El Vínculo Reserva 2006" data-precio="15.10">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1560728418-e4e096980919?auto=format&fit=crop&w=800&h=600&q=80" alt="Valladar" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Valladar Verdejo 2011</div>
+              <div class="menu-etiqueta">D.O. Rueda - Verdejo</div>
+              <p class="menu-detalle">
+                Blanco Verdejo de Rueda. Fresco, aromático con notas herbáceas y cítricas.
+                Ideal para aperitivos, pescados y mariscos.
+              </p>
+              <div class="menu-precios">
+                <span>Botella · 4.25 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="12" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Valladar Verdejo 2011" data-precio="4.25">Agregar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- TAB LICORES -->
+      <div class="menu-tab" id="tab-licores-tab" style="display:none;">
+        <div class="menu-grid">
+          <article class="menu-card destacado">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&h=600&q=80" alt="Crema de Orujo" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Crema de Orujo</div>
+              <div class="menu-etiqueta">Cremoso y suave</div>
+              <p class="menu-detalle">
+                Licor cremoso de orujo con leche. Textura sedosa y dulzor equilibrado. Servir muy frío para disfrutar al máximo.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Crema de Orujo" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1504279807896-e186465bbf2c?auto=format&fit=crop&w=800&h=600&q=80" alt="Pacharán" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Pacharán</div>
+              <div class="menu-etiqueta">Endrinas maceradas en anís</div>
+              <p class="menu-detalle">
+                Licor tradicional navarro de endrinas. Sabor intenso, dulce y aromático. El digestivo clásico de toda la vida.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 8.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Pacharán" data-precio="8.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=800&h=600&q=80" alt="Orujo de Hierbas" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Orujo de Hierbas</div>
+              <div class="menu-etiqueta">Hierbas aromáticas</div>
+              <p class="menu-detalle">
+                Orujo tradicional macerado con hierbas aromáticas. Digestivo perfecto tras la comida, intenso y reconfortante.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Orujo de Hierbas" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=800&h=600&q=80" alt="Orujo Blanco" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Orujo Blanco</div>
+              <div class="menu-etiqueta">Puro y tradicional</div>
+              <p class="menu-detalle">
+                Orujo blanco tradicional sin aromatizar. Fuerte y con carácter, para los amantes de los destilados puros.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.00 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Orujo Blanco" data-precio="3.00">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&h=600&q=80" alt="Limoncello" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Limoncello</div>
+              <div class="menu-etiqueta">Limón italiano</div>
+              <p class="menu-detalle">
+                Licor italiano de limón. Dulce, refrescante y aromático. Perfecto servido muy frío como digestivo.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Limoncello" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Café" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Café</div>
+              <div class="menu-etiqueta">Dulce y aromático</div>
+              <p class="menu-detalle">
+                Licor de café con aroma intenso. Dulce y reconfortante, ideal para terminar la comida con un toque especial.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Café" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1481391243133-f96216dcb5d2?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Cerezas" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Cerezas</div>
+              <div class="menu-etiqueta">Afrutado y dulce</div>
+              <p class="menu-detalle">
+                Licor de cerezas maceradas. Sabor dulce y afrutado con el toque característico de la cereza.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Cerezas" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1481391243133-f96216dcb5d2?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Chocolate" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Chocolate</div>
+              <div class="menu-etiqueta">Cremoso y dulce</div>
+              <p class="menu-detalle">
+                Licor de chocolate con textura cremosa. Dulce e indulgente, perfecto para los amantes del chocolate.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Chocolate" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Miel" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Miel</div>
+              <div class="menu-etiqueta">Suave y aromático</div>
+              <p class="menu-detalle">
+                Licor elaborado con miel natural. Dulce, suave y aromático, con el sabor característico de la miel de calidad.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Miel" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Nueces" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Nueces</div>
+              <div class="menu-etiqueta">Intenso y aromático</div>
+              <p class="menu-detalle">
+                Licor de nueces verdes maceradas. Sabor intenso y característico, perfecto como digestivo tradicional.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Nueces" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&h=600&q=80" alt="Licor de Rosas" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Licor de Rosas</div>
+              <div class="menu-etiqueta">Floral y delicado</div>
+              <p class="menu-detalle">
+                Licor delicado con aroma y sabor a rosas. Dulce, floral y aromático, una experiencia única para el paladar.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 3.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Licor de Rosas" data-precio="3.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card-imagen">
+              <img src="https://images.unsplash.com/photo-1564890969742-65b12df72e2f?auto=format&fit=crop&w=800&h=600&q=80" alt="Madeira" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-contenido">
+              <div class="menu-titulo">Madeira</div>
+              <div class="menu-etiqueta">Vino fortificado portugués</div>
+              <p class="menu-detalle">
+                Vino fortificado de la isla de Madeira. Dulce, complejo y con carácter. Perfecto para postres o como digestivo.
+              </p>
+              <div class="menu-precios">
+                <span>Copa · 4.50 €</span>
+              </div>
+              <div class="producto-selectors">
+                <input type="number" class="cantidad-input" min="1" max="10" value="1" placeholder="Cantidad">
+                <button class="btn-agregar" data-producto="Madeira" data-precio="4.50">Agregar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="sobre">
+    <div class="contenedor sobre-grid">
+      <div class="sobre-texto fade-up">
+        <h2>Nuestra Historia</h2>
+        <p>
+          En 1952, Don Antonio Balaguer abrió las puertas de esta pastelería en el corazón de Madrid.
+          Desde entonces, tres generaciones han mantenido viva la tradición artesanal y el compromiso
+          con la calidad.
+        </p>
+        <p>
+          Cada croissant, tarta y bocadillo se elabora siguiendo las recetas familiares, con ingredientes
+          seleccionados y el mismo cariño de siempre. Nuestra bodega es el complemento perfecto para
+          quienes buscan productos selectos y de proximidad.
+        </p>
+
+        <div class="sobre-recursos">
+          <div class="recurso-card">
+            <span class="recurso-kicker">Desde 1952</span>
+            <p>Más de 70 años horneando tradición y calidad en cada producto.</p>
+          </div>
+          <div class="recurso-card">
+            <span class="recurso-kicker">Artesanal</span>
+            <p>Elaboración diaria con masa madre y fermentación natural.</p>
+          </div>
+          <div class="recurso-card">
+            <span class="recurso-kicker">Bodega selecta</span>
+            <p>Vinos y licores de denominaciones de origen españolas.</p>
+          </div>
+        </div>
+
+        <div class="sobre-valores">
+          <div class="sobre-valor">
+            <strong>Tradición familiar</strong>
+            Tres generaciones elaborando con las mismas recetas de siempre.
+          </div>
+          <div class="sobre-valor">
+            <strong>Ingredientes premium</strong>
+            Mantequilla francesa, chocolate belga y harinas de calidad superior.
+          </div>
+          <div class="sobre-valor">
+            <strong>Horneado diario</strong>
+            Croissants y bollería recién salidos del horno cada mañana.
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-galeria fade-up">
+        <div class="galeria-item tall">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&h=1000&q=80" alt="Obrador" loading="lazy" decoding="async">
+          <div class="galeria-caption">
+            <span>Nuestro obrador</span>
+            <small>Elaboración artesanal</small>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&h=600&q=80" alt="Tartas" loading="lazy" decoding="async">
+          <div class="galeria-caption">
+            <span>Tartas caseras</span>
+            <small>Recetas de la abuela</small>
+          </div>
+        </div>
+        <div class="galeria-item wide">
+          <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&h=500&q=80" alt="Bodega" loading="lazy" decoding="async">
+          <div class="galeria-caption">
+            <span>Nuestra bodega</span>
+            <small>Vinos y licores selectos</small>
+          </div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&h=600&q=80" alt="Bocadillos" loading="lazy" decoding="async">
+          <div class="galeria-caption">
+            <span>Bocadillos artesanos</span>
+            <small>Con pan del día</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="contenedor contacto-grid">
+      <div class="fade-up">
+        <h2>Contacto y Pedidos</h2>
+        <p class="section-subtitle">
+          Ven a visitarnos o realiza tu pedido por teléfono. ¡Te esperamos!
+        </p>
+
+        <form id="contactoForm">
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto" required />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje o detalles del pedido</label>
+            <textarea id="mensaje" name="mensaje"
+                      placeholder="Cuéntanos qué necesitas..."
+                      required></textarea>
+          </div>
+          <div class="campo">
+            <button type="submit" class="btn">Enviar consulta <span>✉️</span></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contacto-info fade-up">
+        <div class="info-bloque">
+          <h3>Visítanos</h3>
+          <p>
+            Pastelería Balaguer<br>
+            Calle Mayor, 42<br>
+            28013 Madrid, España
+          </p>
+        </div>
+        <div class="info-bloque">
+          <h3>Horario</h3>
+          <p>
+            Lunes a Viernes: 07:30 – 14:00 / 16:30 – 20:30<br>
+            Sábados: 08:00 – 14:30<br>
+            Domingos: 09:00 – 14:00
+          </p>
+        </div>
+        <div class="info-bloque">
+          <h3>Contacto</h3>
+          <p>
+            Teléfono: <strong><a href="tel:915551234">915 551 234</a></strong><br>
+            Email: <strong><a href="mailto:info@pasteleriabalaguer.com">info@pasteleriabalaguer.com</a></strong>
+          </p>
+        </div>
+
+        <div class="info-bloque">
+          <h3>Síguenos</h3>
+          <div class="rrss">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect width="24" height="24" rx="6" fill="url(#instagram-gradient)"/>
+                <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 1.6a3.2 3.2 0 1 1 0 6.4 3.2 3.2 0 0 1 0-6.4z" fill="#fff"/>
+                <circle cx="17.5" cy="6.5" r="0.9" fill="#fff"/>
+                <defs>
+                  <linearGradient id="instagram-gradient" x1="0" y1="0" x2="24" y2="24">
+                    <stop offset="0%" stop-color="#f58529"/>
+                    <stop offset="50%" stop-color="#dd2a7b"/>
+                    <stop offset="100%" stop-color="#8134af"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#1da1f2">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Pastelería Balaguer. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Sistema de Carrito
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    function guardarCarrito() {
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+
+    function actualizarCarrito() {
+      const itemsCarrito = document.getElementById('itemsCarrito');
+      const contadorCarrito = document.getElementById('contadorCarrito');
+      const totalCarrito = document.getElementById('totalCarrito');
+
+      const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+      contadorCarrito.textContent = totalItems;
+
+      if (carrito.length === 0) {
+        itemsCarrito.innerHTML = '<div class="carrito-vacio">Tu pedido está vacío</div>';
+        totalCarrito.textContent = '0.00';
+      } else {
+        itemsCarrito.innerHTML = carrito.map((item, idx) => `
+          <div class="carrito-item">
+            <div class="carrito-item-info">
+              <div class="carrito-item-nombre">${item.producto}</div>
+              <div class="carrito-item-detalle">${item.tamaño || ''} x ${item.cantidad}</div>
+            </div>
+            <div class="carrito-item-precio">${(item.precio * item.cantidad).toFixed(2)}€</div>
+            <button class="carrito-item-eliminar" onclick="eliminarDelCarrito(${idx})">×</button>
+          </div>
+        `).join('');
+
+        const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+        totalCarrito.textContent = total.toFixed(2);
+      }
+    }
+
+    function agregarAlCarrito(producto, tamaño, precio, cantidad) {
+      const item = carrito.find(i => i.producto === producto && i.tamaño === tamaño);
+      if (item) {
+        item.cantidad += cantidad;
+      } else {
+        carrito.push({ producto, tamaño, precio, cantidad });
+      }
+      guardarCarrito();
+      actualizarCarrito();
+      const carritoModal = document.getElementById('carritoModal');
+      carritoModal.classList.add('activo');
+      setTimeout(() => {
+        carritoModal.classList.remove('activo');
+      }, 2000);
+    }
+
+    function eliminarDelCarrito(idx) {
+      carrito.splice(idx, 1);
+      guardarCarrito();
+      actualizarCarrito();
+    }
+
+    // Event listeners
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('btn-agregar')) {
+        const card = e.target.closest('.menu-card') || e.target.closest('.menu-card-contenido');
+        const selector = card.querySelector('.selector-tamaño');
+        const cantidad = parseInt(card.querySelector('.cantidad-input').value);
+        
+        let precio, tamaño, producto;
+        
+        if (selector) {
+          const precios = selector.dataset.precios.split('|').map(Number);
+          const indice = parseInt(selector.value);
+          tamaño = selector.options[indice].text;
+          precio = precios[indice];
+          producto = e.target.dataset.producto;
+        } else {
+          precio = parseFloat(e.target.dataset.precio);
+          tamaño = 'Unidad';
+          producto = e.target.dataset.producto;
+        }
+
+        agregarAlCarrito(producto, tamaño, precio, cantidad);
+      }
+    });
+
+    // Toggle carrito
+    document.getElementById('btnCarrito').addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.getElementById('carritoModal').classList.toggle('activo');
+    });
+
+    document.addEventListener('click', (e) => {
+      const carritoModal = document.getElementById('carritoModal');
+      const btnCarrito = document.getElementById('btnCarrito');
+      if (!carritoModal.contains(e.target) && !btnCarrito.contains(e.target)) {
+        carritoModal.classList.remove('activo');
+      }
+    });
+
+    // Botón hacer pedido
+    document.getElementById('btnPedido').addEventListener('click', () => {
+      if (carrito.length === 0) {
+        alert('Tu pedido está vacío');
+        return;
+      }
+      alert('Funcionalidad de pedido en desarrollo. Total: ' + document.getElementById('totalCarrito').textContent + '€');
+    });
+
+    // Pestañas
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabsSection = btn.closest('section');
+        tabsSection.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        tabsSection.querySelectorAll('.menu-tab').forEach(t => t.style.display = 'none');
+        
+        btn.classList.add('active');
+        tabsSection.querySelector('#tab-' + btn.dataset.tab).style.display = 'block';
+      });
+    });
+
+    // Animaciones scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Año actual
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Inicializar
+    actualizarCarrito();
+  </script>
+</body>
+</html>
